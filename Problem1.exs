@@ -210,13 +210,20 @@ defmodule Problem1 do
 
   def part1() do
     input = parse_input()
-    [{x, y} | _] = for x <- input, y <- input, x + y == 2020, do: {x, y}
+    # One input must be below 1010, and one above 1010
+    first_half = Enum.filter(input, fn x -> x < 1010 end)
+    second_half = Enum.filter(input, fn x -> x > 1010 end)
+
+    [{x, y} | _] = for x <- first_half, y <- second_half, x + y == 2020, do: {x, y}
     x * y
   end
 
   def part2() do
     input = parse_input()
-    [{x, y, z} | _] = for x <- input, y <- input, z <- input, x + y + z == 2020, do: {x, y, z}
+    # Atleast one input must be below 2020/3
+    first_third = Enum.filter(input, fn x -> x < 2020/3 end)
+
+    [{x, y, z} | _] = for x <- first_third, y <- input, z <- input, x + y + z == 2020, do: {x, y, z}
     x * y * z
   end
 end
