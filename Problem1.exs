@@ -221,9 +221,12 @@ defmodule Problem1 do
   def part2() do
     input = parse_input()
     # Atleast one input must be below 2020/3
-    first_third = Enum.filter(input, fn x -> x < 2020/3 end)
+    below_third = Enum.filter(input, fn x -> x < 2020/3 end) 
+    # Atleast one input must be above 2020/3
+    above_third = Enum.filter(input, fn x -> x > 2020/3 end)
+    # Last input can be either
 
-    [{x, y, z} | _] = for x <- first_third, y <- input, z <- input, x + y + z == 2020, do: {x, y, z}
+    [{x, y, z} | _] = for x <- below_third, y <- above_third, z <- input, x + y + z == 2020, do: {x, y, z}
     x * y * z
   end
 end
