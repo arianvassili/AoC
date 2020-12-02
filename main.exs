@@ -5,6 +5,6 @@ IO.puts "Problem1: [part 1 and 2]"
 IO.inspect Problem1.part1()
 IO.inspect Problem1.part2()
 
-IO.puts "Problem2"
+IO.puts "Problem2: [part 1 and 2]"
 IO.inspect Problem2.part1()
 IO.inspect Problem2.part2()
