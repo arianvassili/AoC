@@ -83,7 +83,7 @@ defmodule Problem4 do
       if String.length(pid) != 9 do
         throw "fail"
       end
-      String.to_integer(pid)
+      _ = String.to_integer(pid)
       # All parses valid, return true
       true
     catch # If any of the naive parses is not valid, catch and return false
