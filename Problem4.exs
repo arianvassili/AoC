@@ -27,7 +27,7 @@ defmodule Problem4 do
     try do # Naively try to do all parses
       # byr (Birth Year) - four digits; at least 1920 and at most 2002.
       byr = String.to_integer(byr)
-      if (byr < 1919 or byr > 2002) do
+      if (byr < 1920 or byr > 2002) do
         throw "fail"
       end
       # iyr (Issue Year) - four digits; at least 2010 and at most 2020.
