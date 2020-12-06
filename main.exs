@@ -3,6 +3,7 @@ Code.require_file("Problem2.exs")
 Code.require_file("Problem3.exs")
 Code.require_file("Problem4.exs")
 Code.require_file("Problem5.exs")
+Code.require_file("Problem6.exs")
 
 IO.puts "Problem1: [part 1 and 2]"
 IO.inspect Problem1.part1()
@@ -23,3 +24,7 @@ IO.inspect Problem4.part2()
 IO.puts "Problem5: [part 1 and 2]"
 IO.inspect Problem5.part1()
 IO.inspect Problem5.part2()
+
+IO.puts "Problem6: [part 1 and 2]"
+IO.inspect Problem6.part1()
+IO.inspect Problem6.part2()
